@@ -63,5 +63,32 @@ public class StatistikNilai {
         // memakai double supaya pembagian tidak terpotong
         double rataRata = (double) total / daftar.size();
 
+        int diAtasRataRata = 0;
+        for (int i = 0; i < daftar.size(); i++) {
+            if (daftar.get(i) > rataRata) {
+                diAtasRataRata++;
+            }
+        }
+
+        int[] jumlahGrade = new int [5];
+        for (int i = 0; i < daftar.size(); i++) {
+            int n = daftar.get(i);
+            if (n >= 90) {
+                jumlahGrade[0]++;
+            } else if (n >= 80) {
+                jumlahGrade[1]++;
+            } else if (n >= 70) {
+                jumlahGrade[2]++;
+            }  else if (n >= 60) {
+                jumlahGrade[3]++;
+            }else {
+                jumlahGrade[4]++;
+            }
+        }
+        String[] namaGrade = {"A", "B", "C", "D", "E"};
+
+        ArrayList<Integer> terurut = new ArrayList<>(daftar);
+        Collections.sort(terurut);
+
         }
 }
