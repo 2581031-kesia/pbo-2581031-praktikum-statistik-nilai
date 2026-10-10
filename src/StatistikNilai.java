@@ -90,5 +90,25 @@ public class StatistikNilai {
         ArrayList<Integer> terurut = new ArrayList<>(daftar);
         Collections.sort(terurut);
 
+        System.out.println("Nilai tersimpan : " + daftar);
+        System.out.println("Jumlah          : " + daftar.size());
+        System.out.println("Rata-rata       : " + String.format("%.2f", rataRata));
+        System.out.println("Tertinggi       : " + tertinggi);
+        System.out.println("Terendah        : " + terendah);
+        System.out.println("Di atas rata2   : " + diAtasRataRata + " orang");
+
+        // Distribusi dicetak dengan loop, bukan lima baris println
+        System.out.print("Distribusi      :");
+        for (int i = 0; i < jumlahGrade.length; i++) {
+            System.out.print(" " + namaGrade[i] + "=" + jumlahGrade[i]);
         }
+        System.out.println();
+
+        System.out.println("Terurut         : " + terurut);
+        // Bukti daftar asli tidak ikut terurut
+        System.out.println("Urutan asli     : " + daftar);
+
+        scanner.close();
+
+    }
 }
