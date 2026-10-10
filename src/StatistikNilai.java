@@ -108,6 +108,12 @@ public class StatistikNilai {
         // Bukti daftar asli tidak ikut terurut
         System.out.println("Urutan asli     : " + daftar);
 
+        // KOMENTAR UNTUK JUMLAH DI ATAS RATAR-ATA
+        // jumlah di atas rata-rata dihitung dengan putaran KEDUA.
+        // Tidak bisa dihitung di putaran pertama karena rata-rata baru diketahui setelah
+        // SEMUA nilai dijumlahkan dan dibagi. Saat putaran pertama baru membaca nilai ke-1,
+        // total dan jumlah datanya belum lengkap, jadi tidak ada angka rata-rata yang bisa dijadikan pembanding.
+
         scanner.close();
 
     }
